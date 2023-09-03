@@ -1,2 +1,33 @@
 @charset "UTF-8";
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.561);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.286);
+}
+
+header img {
+    padding: 5px;
+}
+
+#container-produto{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-produto{
+    border: 2px skyblue solid;
+    width: 16vw;
+    margin: 3vw;
+    padding: 0.5vw;
+
+}
+
+.card-produto img{
+    width: 16vw;
+}

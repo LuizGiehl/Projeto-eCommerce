@@ -38,22 +38,52 @@ header img {
 }
 
 #carrinho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0px;
-    right: 0px;
-    background-color: lightgray;
+    right: -1000px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.250);
     height: 100vh;
     width: 45vw;
+    transition: 100ms;
+    padding: 10px;
 }
 
-section#carrinho > div > button {
-    font-size: 30px;
-    margin: 3px;
+section#carrinho button {
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 
 #cabecalho-carrinho {
     display: flex;
     justify-content: space-between;
+}
+
+article.produto-carrinho {
+    display: flex;
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+article.produto-carrinho p {
+    padding: 4px;
+    color: rgb(251, 251, 251);
+}
+
+article.produto-carrinho p#preco {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+article.produto-carrinho img {
+    width: 14vw;
+    
+    
 }
 
 #fim-compra {

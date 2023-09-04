@@ -62,11 +62,24 @@ section#carrinho button {
     justify-content: space-between;
 }
 
+button#fechar-carrinho :hover {
+    font-size: 26px;
+    transform: translate(-2px, -2px);
+    animation-duration: 100ms;
+}
+
+section#produtos-do-carrinho > article.produto-carrinho > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 article.produto-carrinho {
     display: flex;
     background-color: gray;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 article.produto-carrinho p {
@@ -82,8 +95,17 @@ article.produto-carrinho p#preco {
 
 article.produto-carrinho img {
     width: 14vw;
-    
-    
+}
+
+button#remover-produto{
+    position: absolute;
+    top: 6px;
+    right: 9px;
+    color: rgba(0, 0, 0, 0.626);
+}
+
+button#remover-produto:hover{
+    color: black;
 }
 
 #fim-compra {

@@ -17,3 +17,18 @@ export function inicializarCarrinho() {
     botaoFecharCarrinho.addEventListener("click", fecharCarrinho);
     botaoAbrirCarrinho.addEventListener("click", abrirCarrinho);
 }
+
+function adicionarAoCarrinho() {
+    const containerProdutosCarrinho = document.getElementById('produtos-do-carrinho')
+
+    const cartaoDoProduto = `<article class="produto-carrinho">
+    <button id="remover-produto"><i class="fa-solid fa-circle-xmark"></i></button>
+    <img src="imagens/product-02.webp" alt="produto 2">
+    <div>
+        <p>Camiseta Cotton RD Experience</p>
+        <p>Tamanho: M</p>
+        <p id="preco">R$139</p>
+    </div>
+</article>`
+    containerProdutosCarrinho.innerHTML() += cartaoDoProduto
+} 

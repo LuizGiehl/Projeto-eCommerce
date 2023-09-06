@@ -1,7 +1,4 @@
-import { renderizarCatalogo } from "./src/card-de-produto.js";
-import { inicializarCarrinho } from "./src/carrinho.js"
-
-const catalogo = [
+ export const catalogo = [
     {
         id: 1,
         nome: "Regata Minimalist Army",
@@ -59,6 +56,3 @@ const catalogo = [
         nomeArquivoImg: "product-08.webp"
     }
 ]
-
-renderizarCatalogo();
-inicializarCarrinho();

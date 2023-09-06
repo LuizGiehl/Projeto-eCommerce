@@ -122,11 +122,32 @@ button#remover-produto:hover{
 }
 
 .card-produto{
-    border: 2px skyblue solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.463);
     width: 16vw;
     margin: 3vw;
 }
 
 .card-produto img{
+    border-radius: 7px;
     width: 16vw;
+}
+
+.card-produto:hover img{
+    transform: translate(5px, -7px);
+    animation: 300ms;
+}
+
+button.botao-adicionar {
+    background-color: black;
+    color: #ffffff;
+    padding: 7px;
+}
+
+button.botao-adicionar:hover {
+    background-color: rgb(80, 80, 80);
 }

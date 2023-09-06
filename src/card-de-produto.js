@@ -7,7 +7,7 @@ export function renderizarCatalogo() {
     <p>${produtoCatalogo.nome}</p>
     <p>${produtoCatalogo.marca}</p>
     <p>R$ ${produtoCatalogo.preco}</p>
-    <button>Adicionar</button>
+    <button class="botao-adicionar"><i class="fa-solid fa-cart-plus"></i></button>
     </div>`
 
     document.getElementById("container-produto").innerHTML += cartaoProduto

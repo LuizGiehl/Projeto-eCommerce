@@ -1,4 +1,5 @@
-import { catalogo } from "./ultilidades.js"
+import { catalogo } from "./ultilidades.js";
+import { adicionarAoCarrinho } from "./carrinho.js";
 
 export function renderizarCatalogo() {
     for (const produtoCatalogo of catalogo) {
@@ -7,9 +8,14 @@ export function renderizarCatalogo() {
     <p>${produtoCatalogo.nome}</p>
     <p>${produtoCatalogo.marca}</p>
     <p>R$ ${produtoCatalogo.preco}</p>
-    <button class="botao-adicionar"><i class="fa-solid fa-cart-plus"></i></button>
+    <button id="adicionar-${produtoCatalogo.id}" class="botao-adicionar"><i class="fa-solid fa-cart-plus"></i></button>
     </div>`
 
-    document.getElementById("container-produto").innerHTML += cartaoProduto
-} 
+    document.getElementById("container-produto").innerHTML += cartaoProduto;
+}
+    for (const produtoCatalogo of catalogo ) {
+        document.getElementById(`adicionar-${produtoCatalogo.id}`).addEventListener('click', adicionarAoCarrinho);
     }
+
+    }
+

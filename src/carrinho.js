@@ -18,9 +18,7 @@ export function inicializarCarrinho() {
     botaoAbrirCarrinho.addEventListener("click", abrirCarrinho);
 }
 
-function adicionarAoCarrinho() {
-    const containerProdutosCarrinho = document.getElementById('produtos-do-carrinho')
-
+export function adicionarAoCarrinho() {
     const cartaoDoProduto = `<article class="produto-carrinho">
     <button id="remover-produto"><i class="fa-solid fa-circle-xmark"></i></button>
     <img src="imagens/product-02.webp" alt="produto 2">
@@ -29,6 +27,6 @@ function adicionarAoCarrinho() {
         <p>Tamanho: M</p>
         <p id="preco">R$139</p>
     </div>
-</article>`
-    containerProdutosCarrinho.innerHTML() += cartaoDoProduto
+</article>`;
+    document.getElementById("produtos-do-carrinho").innerHTML += cartaoDoProduto
 } 

@@ -56,10 +56,14 @@ export function adicionarAoCarrinho(idProduto) {
             <p id="preco">R$${produto.preco}</p>
         </div>
         <div class="botoes-produto">
-            <button>-</button>
+            <button id="decrementar-produto-${produto.id}">-</button>
             <p id="quantidade-${produto.id}">${idsProdutoCarrinhoComQuantidade[produto.id]}</p>
-            <button>+</button>
+            <button id="incrementar-produto-${produto.id}">+</button>
         </div>
     </article>`;
     document.getElementById("produtos-do-carrinho").innerHTML += cartaoDoProduto
+
+    document.getElementById(`decrementar-produto-${produto.id}`).addEventListener('click', () => decrementarQuantidadeProduto(produto.id))
+
+    document.getElementById(`incrementar-produto-${produto.id}`).addEventListener('click', () => incrementarQuantidadeProduto(produto.id))
 } 

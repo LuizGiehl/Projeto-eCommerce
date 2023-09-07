@@ -119,7 +119,7 @@ article.produto-carrinho img {
     width: 14vw;
 }
 
-button#remover-produto{
+button.remover-produto{
     position: absolute;
     top: 6px;
     right: 9px;

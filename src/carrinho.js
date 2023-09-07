@@ -44,8 +44,11 @@ export function adicionarAoCarrinho(idProduto) {
     }
     idsProdutoCarrinhoComQuantidade[idProduto] = 1
     const produto = catalogo.find((p) => p.id === idProduto)
+
+    const elementoArticle = document.createElement("article")
+    elementoArticle.classList.add('produto-carrinho') 
+
     const cartaoDoProduto = `
-    <article class="produto-carrinho">
         <button id="remover-produto">
              <i class="fa-solid fa-circle-xmark"></i>
         </button>
@@ -59,9 +62,10 @@ export function adicionarAoCarrinho(idProduto) {
             <button id="decrementar-produto-${produto.id}">-</button>
             <p id="quantidade-${produto.id}">${idsProdutoCarrinhoComQuantidade[produto.id]}</p>
             <button id="incrementar-produto-${produto.id}">+</button>
-        </div>
-    </article>`;
-    document.getElementById("produtos-do-carrinho").innerHTML += cartaoDoProduto
+        </div>`;
+
+    elementoArticle.innerHTML = cartaoDoProduto
+    document.getElementById("produtos-do-carrinho").appendChild(elementoArticle)
 
     document.getElementById(`decrementar-produto-${produto.id}`).addEventListener('click', () => decrementarQuantidadeProduto(produto.id))
 

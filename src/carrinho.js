@@ -1,3 +1,5 @@
+import { catalogo } from "./ultilidades.js";
+
 function abrirCarrinho() {
     
     document.getElementById("carrinho").style.right = '0px'
@@ -18,14 +20,15 @@ export function inicializarCarrinho() {
     botaoAbrirCarrinho.addEventListener("click", abrirCarrinho);
 }
 
-export function adicionarAoCarrinho() {
+export function adicionarAoCarrinho(idProduto) {
+    const produto = catalogo.find((p) => p.id === idProduto)
     const cartaoDoProduto = `<article class="produto-carrinho">
     <button id="remover-produto"><i class="fa-solid fa-circle-xmark"></i></button>
-    <img src="imagens/product-02.webp" alt="produto 2">
+    <img src="imagens/${produto.nomeArquivoImg}" alt="${produto.nome}">
     <div>
-        <p>Camiseta Cotton RD Experience</p>
+        <p>${produto.nome}</p>
         <p>Tamanho: M</p>
-        <p id="preco">R$139</p>
+        <p id="preco">R$${produto.preco}</p>
     </div>
 </article>`;
     document.getElementById("produtos-do-carrinho").innerHTML += cartaoDoProduto

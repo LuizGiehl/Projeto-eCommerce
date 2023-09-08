@@ -143,6 +143,17 @@ button#remover-produto:hover{
     color: black;
 }
 
+#preco-total {
+    background-color: gray;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 9px;
+    color: #0a2500;
+}
+
 #fim-compra {
     background-color: rgb(67, 65, 65);
     color: #ffffff;
@@ -178,7 +189,7 @@ button#remover-produto:hover{
 }
 
 button.botao-adicionar {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: #ffffff;
     padding: 7px;
 }

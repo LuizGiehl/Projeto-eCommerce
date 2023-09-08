@@ -175,7 +175,19 @@ main{
 }
 
 section#filtros > div {
-    padding: 5px 7px 7px 0px;
+    padding: 5px 15px 0px 15px;
+}
+
+.nome-botao {
+    color: blue;
+}
+
+section#filtros > div > input:checked + label {
+    color: red;
+}
+
+section#filtros > div > input{
+    display: none;
 }
 
 #container-produto{

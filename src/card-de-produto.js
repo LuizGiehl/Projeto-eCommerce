@@ -3,7 +3,7 @@ import { adicionarAoCarrinho } from "./carrinho.js";
 
 export function renderizarCatalogo() {
     for (const produtoCatalogo of catalogo) {
-        const cartaoProduto = `<div class="card-produto">
+        const cartaoProduto = `<div class="card-produto" class="${produtoCatalogo.camiseta ? "camiseta" : (produtoCatalogo.calça ? "calca" : (produtoCatalogo.casaco ? "casaco" : "regata"))}" id="card-produto-${produtoCatalogo.id}">
     <img src="./imagens/${produtoCatalogo.nomeArquivoImg}" alt="Produto 1">
     <p>${produtoCatalogo.nome}</p>
     <p>${produtoCatalogo.marca}</p>
@@ -17,4 +17,3 @@ export function renderizarCatalogo() {
         document.getElementById(`adicionar-${produtoCatalogo.id}`).addEventListener('click', () => adicionarAoCarrinho(produtoCatalogo.id));
     }
 }
-

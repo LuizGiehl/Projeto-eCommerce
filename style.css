@@ -162,6 +162,22 @@ button#remover-produto:hover{
     font-size: 20px;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#filtros {
+    display: flex;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+section#filtros > div {
+    padding: 5px 7px 7px 0px;
+}
+
 #container-produto{
     display: flex;
     flex-wrap: wrap;

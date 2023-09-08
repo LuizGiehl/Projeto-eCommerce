@@ -1,7 +1,7 @@
 import { catalogo } from "./ultilidades.js";
+import { salvarLocalStorage, lerLocalStorage } from "./ultilidades.js";
 
-const idsProdutoCarrinhoComQuantidade = {
-}
+const idsProdutoCarrinhoComQuantidade = lerLocalStorage("carrinho") ?? {};
 
 function abrirCarrinho() {
     
@@ -27,12 +27,14 @@ export function inicializarCarrinho() {
 
 function removerDoCarrinho(idProduto) {
     delete idsProdutoCarrinhoComQuantidade[idProduto];
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
     atualizarPrecoNoCarrinho();
     renderizarProdutosCarrinho();
 }
 
 function incrementarQuantidadeProduto(idProduto) {
     idsProdutoCarrinhoComQuantidade[idProduto]++;
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
     atualizarPrecoNoCarrinho();
     atualizarInformacaoQuantidade(idProduto);
 }
@@ -44,6 +46,7 @@ function decrementarQuantidadeProduto(idProduto) {
     }
 
     idsProdutoCarrinhoComQuantidade[idProduto]--;
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
     atualizarPrecoNoCarrinho();
     atualizarInformacaoQuantidade(idProduto);
 }
@@ -83,7 +86,7 @@ function desenharProdutoNoCarrinho(idProduto) {
     document.getElementById(`remover-item-${produto.id}`).addEventListener('click', () => removerDoCarrinho(produto.id))
 }
 
-function renderizarProdutosCarrinho() {
+export function renderizarProdutosCarrinho() {
     const containerProdutosCarrinho = document.getElementById("produtos-do-carrinho")
     containerProdutosCarrinho.innerHTML = ""
 
@@ -98,11 +101,12 @@ export function adicionarAoCarrinho(idProduto) {
         return;
     }
     idsProdutoCarrinhoComQuantidade[idProduto] = 1
-    desenharProdutoNoCarrinho(idProduto)
+    desenharProdutoNoCarrinho(idProduto);
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
     atualizarPrecoNoCarrinho();
 } 
 
-function atualizarPrecoNoCarrinho() {
+export function atualizarPrecoNoCarrinho() {
     const precoCarrinho = document.getElementById("preco-total")
     let precoTotalCarrinho = 0
     for (const idProdutoNoCarrinho in idsProdutoCarrinhoComQuantidade) {

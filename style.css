@@ -13,19 +13,27 @@ button{
     margin: 0px;
 }
 
+body {
+    padding-top: 130px;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.561);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.286);
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.286);
     z-index: 80;
 }
 
 header div {
+    width: 100vw;
     display: flex;
+    justify-content: end;
+    flex-direction: row;
     align-items: end;
 }
 
@@ -35,6 +43,11 @@ header button {
     border: none;
     background-color: transparent;
     font-size: 20px;
+}
+
+#ultimo-botao{
+    padding-right: 25px;
+    padding-left: 5px;
 }
 
 header img {

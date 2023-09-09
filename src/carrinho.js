@@ -16,12 +16,22 @@ function fecharCarrinho() {
 
 }
 
+function irParaCheckout() {
+    if (Object.keys(idsProdutoCarrinhoComQuantidade).length === 0) {
+        return
+    }
+    window.location.href = window.location.origin + '/checkout.html';
+}
+
 export function inicializarCarrinho() {
     const botaoFecharCarrinho = document.getElementById('fechar-carrinho')
     const botaoAbrirCarrinho = document.getElementById('abrir-carrinho')
+    const botaoIrParaCheckout = document.getElementById("fim-compra")
 
     botaoFecharCarrinho.addEventListener("click", fecharCarrinho);
     botaoAbrirCarrinho.addEventListener("click", abrirCarrinho);
+    botaoIrParaCheckout.addEventListener("click", irParaCheckout);
+
 }
 
 

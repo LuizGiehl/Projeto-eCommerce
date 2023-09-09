@@ -41,6 +41,15 @@ input#cvv, input#validade, input#numero, input#complemento {
     margin: auto;
 }
 
+#container-produtos-checkout {
+    height: 75vh;
+}
+
+#celula-checkout {
+    height: 25vh;
+    overflow: auto;
+}
+
 div.campo{
     display: flex;
     flex-direction: column;

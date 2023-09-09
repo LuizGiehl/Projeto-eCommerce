@@ -179,11 +179,17 @@ section#filtros > div {
 }
 
 .nome-botao {
-    color: blue;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
 }
 
 section#filtros > div > input:checked + label {
-    color: red;
+    background-image: linear-gradient(white, black);
+    padding: 9px;
+    color: white;
+    border-radius: 0px 0px 5px 5px;
 }
 
 section#filtros > div > input{

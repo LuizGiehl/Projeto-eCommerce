@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+form.formulario {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding: 5px;
+}
+
+.sessao-form {
+    width: 31vw;
+    height: 100vh;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(233, 233, 234, 0.605);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-sessao {
+    text-align: center;
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 0px 30px 0px;
+}
+
+div.divzona {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+input#cvv, input#validade, input#numero, input#complemento {
+    flex: 1;
+    max-width: 22vw;
+    margin: auto;
+}
+
+div.campo{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+label.nome-campo {
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+input.dado {
+    height: 20px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    padding-left: 7px;
+}

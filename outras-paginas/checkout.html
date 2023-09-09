@@ -5,14 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../estilos-alternativos/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <img src="../imagens/logo-army.webp" alt="Logo da Army">
     </header>
-    <main>
-        
-    </main>
+    <form action="" method="post" class="formulario"> 
+        <section id="dados-usuario " class="sessao-form">
+            <p class="titulo-sessao">Seus Dados</p>
+            <div class="campo">
+                <label for="nome" class="nome-campo">Nome: </label>
+                <input type="text" name="nome" id="nome" class="dado" placeholder="Digite seu nome">
+            </div>
+            <div class="campo">
+                <label for="email" class="nome-campo">Email: </label>
+                <input type="email" name="email" id="email" class="dado" placeholder="Digite seu email" pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$">
+            </div>
+            <div class="campo">
+                <label for="telefone" class="nome-campo">Telefone: </label>
+                <input type="tel" name="telefone" id="telefone" class="dado" placeholder="(XX) XXXXX-XXXX">
+            </div>
+        </section>
+
+        <section id="pagamento-entrega" class="sessao-form">
+            <p class="titulo-sessao">Pagamento e Entrega</p>
+            <div class="campo">
+                <label for="cartao" class="nome-campo">Numero do Cartão: </label>
+                <input type="number" name="cartao" id="cartao" class="dado" placeholder="1111 1111 1111 1111" pattern="^\d{4} \d{4} \d{4} \d{4}$" >
+            </div>
+            <div class="divzona">
+                <div class="campo">
+                    <label for="cvv" class="nome-campo">CVV: </label>
+                    <input type="number" name="cvv" id="cvv" placeholder="XXX" class="dado">
+                </div>
+                <div class="campo">
+                    <label for="validade" class="nome-campo">Validade:  </label>
+                    <input type="number" name="validade" id="validade" placeholder="XX/XX" class="dado">
+                </div>
+            </div>
+            <div class="campo">
+                <label for="cep" class="nome-campo">CEP: </label>
+                <input type="number" name="cep" id="cep" class="dado" placeholder="11122-333" >
+            </div>
+            <div class="campo">
+                <label for="endereco" class="nome-campo">Endereço: </label>
+                <input type="text" name="endereco" id="endereco" class="dado" placeholder="Rua, Bairro, Cidade, Estado" >
+            </div>
+            <div class="divzona">
+                <div class="campo">
+                    <label for="numero" class="nome-campo">Numero da casa: </label>
+                    <input type="number" name="numero" id="numero" class="dado">
+                </div>
+                <div class="campo">
+                    <label for="complemento" class="nome-campo">Complemento:  </label>
+                    <input type="text" name="complemento" id="complemento" class="dado">
+                </div>
+        </section>
+
+        <section id="produtos-checkout" class="sessao-form">
+
+        </section>
+    </form>
 </body>
 </html>

@@ -42,12 +42,12 @@ input#cvv, input#validade, input#numero, input#complemento {
 }
 
 #container-produtos-checkout {
-    height: 75vh;
+    height: 70vh;
+    overflow: auto;
 }
 
 #celula-checkout {
-    height: 25vh;
-    overflow: auto;
+    height: 30vh;
 }
 
 div.campo{
@@ -66,4 +66,21 @@ input.dado {
     border-radius: 4px;
     font-size: 1.2em;
     padding-left: 7px;
+}
+
+#produtos-checkout {
+    display: flex;
+    flex-direction: column;
+}
+
+#preco-total {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#fim-compra {
+    width: 100%;
+    border-radius: 5px;
 }

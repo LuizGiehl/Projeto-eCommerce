@@ -17,15 +17,15 @@
             <p class="titulo-sessao">Seus Dados</p>
             <div class="campo">
                 <label for="nome" class="nome-campo">Nome: </label>
-                <input type="text" name="nome" id="nome" class="dado" placeholder="Digite seu nome">
+                <input type="text" name="nome" id="nome" class="dado" placeholder="Digite seu nome" required>
             </div>
             <div class="campo">
                 <label for="email" class="nome-campo">Email: </label>
-                <input type="email" name="email" id="email" class="dado" placeholder="Digite seu email" pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$">
+                <input type="email" name="email" id="email" class="dado" placeholder="Digite seu email" pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$" required>
             </div>
             <div class="campo">
                 <label for="telefone" class="nome-campo">Telefone: </label>
-                <input type="tel" name="telefone" id="telefone" class="dado" placeholder="(XX) XXXXX-XXXX">
+                <input type="tel" name="telefone" id="telefone" class="dado" placeholder="(XX) XXXXX-XXXX" required>
             </div>
         </section>
 
@@ -33,30 +33,30 @@
             <p class="titulo-sessao">Pagamento e Entrega</p>
             <div class="campo">
                 <label for="cartao" class="nome-campo">Numero do Cartão: </label>
-                <input type="number" name="cartao" id="cartao" class="dado" placeholder="1111 1111 1111 1111" pattern="^\d{4} \d{4} \d{4} \d{4}$" >
+                <input type="number" name="cartao" id="cartao" class="dado" placeholder="1111 1111 1111 1111" pattern="^\d{4} \d{4} \d{4} \d{4}$"  required>
             </div>
             <div class="divzona">
                 <div class="campo">
                     <label for="cvv" class="nome-campo">CVV: </label>
-                    <input type="number" name="cvv" id="cvv" placeholder="XXX" class="dado">
+                    <input type="number" name="cvv" id="cvv" placeholder="XXX" class="dado" required>
                 </div>
                 <div class="campo">
                     <label for="validade" class="nome-campo">Validade:  </label>
-                    <input type="number" name="validade" id="validade" placeholder="XX/XX" class="dado">
+                    <input type="number" name="validade" id="validade" placeholder="XX/XX" class="dado" required>
                 </div>
             </div>
             <div class="campo">
                 <label for="cep" class="nome-campo">CEP: </label>
-                <input type="number" name="cep" id="cep" class="dado" placeholder="11122-333" >
+                <input type="number" name="cep" id="cep" class="dado" placeholder="11122-333"  required>
             </div>
             <div class="campo">
                 <label for="endereco" class="nome-campo">Endereço: </label>
-                <input type="text" name="endereco" id="endereco" class="dado" placeholder="Rua, Bairro, Cidade, Estado" >
+                <input type="text" name="endereco" id="endereco" class="dado" placeholder="Rua, Bairro, Cidade, Estado"  required>
             </div>
             <div class="divzona">
                 <div class="campo">
                     <label for="numero" class="nome-campo">Numero da casa: </label>
-                    <input type="number" name="numero" id="numero" class="dado">
+                    <input type="number" name="numero" id="numero" class="dado" required>
                 </div>
                 <div class="campo">
                     <label for="complemento" class="nome-campo">Complemento:  </label>
@@ -69,7 +69,8 @@
 
             </section>
             <section id="celula-checkout">
-
+                <p id="preco-total">R$ 200</p>
+                <button id="fim-compra" type="submit">Finalizar Compra</button>
             </section>
         </section>
     </form>

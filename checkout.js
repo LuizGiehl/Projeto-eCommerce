@@ -8,5 +8,14 @@ function desenharProdutosCheckout() {
     }
 }
 
+function finalizarCompra(evento) {
+    evento.preventDefault()
+    window.location.href = window.location.origin + '/pedidos.html';
+
+}
+
 desenharProdutosCheckout();
 atualizarPrecoNoCarrinho();
+
+
+document.addEventListener("submit", (evt) => finalizarCompra(evt));

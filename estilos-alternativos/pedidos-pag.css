@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.data {
+    margin: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.188);
+}
+
+.container-de-pedidos {
+    background-color: rgba(211, 211, 211, 0.35);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.188);
+}
+
+article.produto-carrinho {
+    max-width: 380px;
+}
